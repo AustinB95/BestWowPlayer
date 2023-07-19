@@ -288,7 +288,7 @@
 // yearsUntilRetirement(1995, 'Austin');
 // yearsUntilRetirement(1984, 'Kelly');
 
-
+// awdawd
 let userInput = prompt("Who is the best wow player?");
 // the id of H1 is userPromt
 let h1Display = document.getElementById("userPrompt");
@@ -306,6 +306,9 @@ lowercaseInput === "biglazy" ) {
   || userInput === "austin" || userInput === "dragonice" || userInput === "catscratch" || userInput === "mastacasta" 
   || userInput === "redpaladin" ) {
     h1Display.textContent = "You're god damn right!";
+  } 
+  else if (userInput === "me" ) {
+    h1Display.textContent = "No, obviously not you. It's probably Moomoothecow";
   } 
   else if (userInput === "leilune" || userInput === "plei" || userInput === "kelly" 
   || userInput === "lampalune" || userInput === "leilelly" || userInput === "lells" || userInput === "lels" 
