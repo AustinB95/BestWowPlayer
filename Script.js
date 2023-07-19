@@ -314,7 +314,7 @@ lowercaseInput === "biglazy" ) {
   || userInput === "lampalune" || userInput === "leilelly" || userInput === "lells" || userInput === "lels" 
   || userInput === "the lels" || userInput === "the lells" || userInput === "maowmaow") {
     const capitalizedInput = userInput.charAt(0).toUpperCase() + userInput.slice(1);
-    h1Display.textContent = `Yeah, ${capitalizedInput}'s pretty good but not as good as Moomoothecow.`;
+    h1Display.textContent = `Yeah, ${capitalizedInput}'s pretty good, better than Deminison - but not as good as Moomoothecow.`;
   } else {
     const capitalizedInput = userInput.charAt(0).toUpperCase() + userInput.slice(1);
     h1Display.textContent = `No one's even heard of "${capitalizedInput}", Obviously Moomoothecow is way better.`;
