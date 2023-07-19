@@ -301,18 +301,18 @@ lowercaseInput === "unreals" || lowercaseInput === "idotwo" || lowercaseInput ==
 lowercaseInput === "rockslam" || lowercaseInput === "maxedout" || lowercaseInput === "meatpack" ||
 lowercaseInput === "biglazy" ) {
     const capitalizedInput = userInput.charAt(0).toUpperCase() + userInput.slice(1);
-   h1Display.textContent = `Yeah right, ${capitalizedInput} sucks! Moomoothecow beats him all the time!`;
-  } else if (userInput === "moomoothecow" || userInput === "steelice" || userInput === "steel ice" 
-  || userInput === "austin" || userInput === "dragonice" || userInput === "catscratch" || userInput === "mastacasta" 
-  || userInput === "redpaladin" ) {
+    h1Display.textContent = `Yeah right, ${capitalizedInput} sucks! Moomoothecow beats him all the time!`;
+  } else if (lowercaseInput === "moomoothecow" || lowercaseInput === "steelice" || lowercaseInput === "steel ice" 
+  || lowercaseInput === "austin" || lowercaseInput === "dragonice" || lowercaseInput === "catscratch" || lowercaseInput === "mastacasta" 
+  || lowercaseInput === "redpaladin" ) {
     h1Display.textContent = "You're god damn right!";
   } 
-  else if (userInput === "me" ) {
+  else if (lowercaseInput === "me" ) {
     h1Display.textContent = "No, obviously not you. It's probably Moomoothecow";
   } 
-  else if (userInput === "leilune" || userInput === "plei" || userInput === "kelly" 
-  || userInput === "lampalune" || userInput === "leilelly" || userInput === "lells" || userInput === "lels" 
-  || userInput === "the lels" || userInput === "the lells" || userInput === "maowmaow") {
+  else if (lowercaseInput === "leilune" || lowercaseInput === "plei" || lowercaseInput === "kelly" 
+  || lowercaseInput === "lampalune" || lowercaseInput === "leilelly" || lowercaseInput === "lells" || lowercaseInput === "lels" 
+  || lowercaseInput === "the lels" || lowercaseInput === "the lells" || lowercaseInput === "maowmaow") {
     const capitalizedInput = userInput.charAt(0).toUpperCase() + userInput.slice(1);
     h1Display.textContent = `Yeah, ${capitalizedInput}'s pretty good, better than Deminison - but not as good as Moomoothecow.`;
   } else {
