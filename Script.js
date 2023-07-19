@@ -321,7 +321,9 @@ lowercaseInput === "biglazy" ) {
   }
 
 
-
+  setTimeout(() => {
+    location.reload();
+  }, 8000);
 
 
 
