@@ -1,15 +1,9 @@
 'use strict';
 
-/*
-document.querySelector('.message').textContent = 'Butt suck sauce';
-document.querySelector('.score').textContent = '6969';
-document.querySelector('.number').textContent = '14';
-document.querySelector('.guess').value = 23;
-*/
 let number = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
-var fart = new Audio('fart.mp3');
+var incorrect = new Audio('incorrect.mp3');
 var cheer = new Audio('hooray.mp3');
 var fail = new Audio('dundundun.mp3');
 const displayMessage = function (message) {
@@ -18,13 +12,44 @@ const displayMessage = function (message) {
 
 //    Show Guess Number
 // document.querySelector('.number').textContent = number;
+/*
+document.addEventListener('keydown', keyPressed);
+function keyPressed(e) {
+    console.log(e.key);
+    console.log(e.keyCode);
+}
 //
+//*/
 
+document.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter' || event.keyCode === 13) {
+        // Trigger the click event when Enter key is pressed
+        document.querySelector('.check').click();
+    }
+});
+
+//
+//
+// document.querySelector('.check').addEventListener('keypress', function (e) {
+//     //
+//     if (e.key === 'Enter' || e.keyCode === 13) {
+//         document.querySelector('.check').click();
+//     }
+// });
+
+//
+//
 document.querySelector('.check').addEventListener('click', function () {
     const guess = Number(document.querySelector('.guess').value);
     if (!guess) {
         //document.querySelector('.message').textContent = 'Numbers Only';
         displayMessage('Numbers Only!');
+        // GUESSES CORRECT NUMBER
+    } else if (guess > 20 || guess < 1) {
+        //document.querySelector('.message').textContent = 'Numbers Only';
+        displayMessage('Numbers between 1 - 20.');
+        document.querySelector('.guess').value = '';
+
         // GUESSES CORRECT NUMBER
     } else if (guess === number) {
         //
@@ -42,17 +67,19 @@ document.querySelector('.check').addEventListener('click', function () {
 
         //
     } else if (guess !== number) {
+        score = score - 5;
+        document.querySelector('.guess').select();
         if (score > 1) {
             displayMessage(guess < number ? 'Higher!' : 'Lower!');
-            score = score - 1;
             document.querySelector('.score').textContent = score;
-            fart.play();
+            incorrect.play();
         } else {
             displayMessage('❌Sorry! You LOSE!❌');
             fail.play();
             score = 0;
             document.querySelector('.score').textContent = score;
             document.querySelector('body').style.backgroundColor = '#c70505';
+            document.querySelector('.number').textContent = number;
         }
     }
 });
